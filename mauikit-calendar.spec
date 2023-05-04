@@ -57,6 +57,9 @@ BuildRequires:	cmake(Qt5WebEngine)
 BuildRequires:	qt5-qtgraphicaleffects
 BuildRequires:	qt5-qtdeclarative
 BuildRequires:	qt5-qtquickcontrols2
+
+BuildRequires:  akonadi-calendar
+
 Requires:	qt5-qtquickcontrols2
 Requires:	qt5-qtgraphicaleffects
 Requires:	%{libname} = %{EVRD}
