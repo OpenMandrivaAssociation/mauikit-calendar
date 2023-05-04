@@ -1,0 +1,24 @@
+diff -up mauikit-calendar-v1.0.1/src/CMakeLists.txt.omv~ mauikit-calendar-v1.0.1/src/CMakeLists.txt
+--- mauikit-calendar-v1.0.1/src/CMakeLists.txt.omv~	2023-05-04 22:33:33.918483191 +0200
++++ mauikit-calendar-v1.0.1/src/CMakeLists.txt	2023-05-04 22:33:38.852525001 +0200
+@@ -77,7 +77,7 @@ kalendar_lib
+ 
+     KF5::CalendarCore
+     KF5::AkonadiCore
+-    KF5::AkonadiCalendar
++    KPim5::AkonadiCalendar
+     KF5::AkonadiContact
+     KF5::AkonadiAgentBase
+     KF5::AkonadiXml
+diff -up mauikit-calendar-v1.0.1/src/code/lib/CMakeLists.txt.omv~ mauikit-calendar-v1.0.1/src/code/lib/CMakeLists.txt
+--- mauikit-calendar-v1.0.1/src/code/lib/CMakeLists.txt.omv~	2023-05-04 22:33:42.674557390 +0200
++++ mauikit-calendar-v1.0.1/src/code/lib/CMakeLists.txt	2023-05-04 22:33:45.542581694 +0200
+@@ -22,7 +22,7 @@ target_link_libraries(kalendar_lib PUBLI
+     KF5::CoreAddons
+     KF5::CalendarCore
+     KF5::AkonadiCore
+-    KF5::AkonadiCalendar
++    KPim5::AkonadiCalendar
+     KF5::AkonadiContact
+     KF5::AkonadiAgentBase
+     KF5::AkonadiXml

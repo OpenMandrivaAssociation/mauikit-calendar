@@ -1,5 +1,5 @@
-%define libname %mklibname mauikit-calendar
-%define devname %mklibname -d mauikit-calendar
+%define libname %mklibname MauiKitCalendar
+%define devname %mklibname -d MauiKitCalendar
 
 Name:		mauikit-calendar
 Version:	1.0.1
@@ -7,6 +7,7 @@ Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Calendar support components for Maui applications
 Url:		http://mauikit.org/
 Source0:	https://invent.kde.org/maui/mauikit-calendar/-/archive/%{?snapshot:master/mauikit-calendar-master.tar.bz2#/mauikit-calendar-%{snapshot}.tar.bz2}%{!?snapshot:v%{version}/mauikit-calendar-v%{version}.tar.bz2}
+Patch0:		mauikit-calendar-akonadi-23.04.patch
 
 License:	LGPL-2.1-or-later, CC0 1.0, BSD-2-Clause
 Group:		Applications/Productivity
@@ -38,10 +39,10 @@ BuildRequires:	cmake(KF5Plasma)
 BuildRequires:	cmake(KF5PlasmaQuick)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(KF5WindowSystem)
-BuildRequires:  cmake(KF5Akonadi)
-BuildRequires:  cmake(KF5AkonadiCalendar)
-BuildRequires:  cmake(KF5AkonadiContact)
-BuildRequires:  cmake(KF5CalendarSupport)
+BuildRequires:  cmake(KPim5Akonadi)
+BuildRequires:  cmake(KPim5AkonadiCalendar)
+BuildRequires:  cmake(KPim5AkonadiContact)
+BuildRequires:  cmake(KPim5CalendarSupport)
 BuildRequires:  cmake(KF5CalendarCore)
 BuildRequires:  cmake(KF5EventViews)
 BuildRequires:  cmake(KF5Contacts)
@@ -84,6 +85,10 @@ Kit for developing MAUI Apps.
 MauiKit is a set of utilities and "templated" controls based on Kirigami and QCC2 that follow the ongoing work on the Maui HIG.
 It let you quickly create a Maui application and access utilities and widgets shared among the other Maui apps.
 
+%files -n %{libname}
+%{_libdir}/libMauiKitCalendar.so*
+%{_libdir}/qt5/qml/org/mauikit/calendar
+
 %package -n %{devname}
 Summary:	Development files for mauikit-calendar
 Group:		Development/KDE and Qt
@@ -96,15 +101,19 @@ Kit for developing MAUI Apps.
 MauiKit is a set of utilities and "templated" controls based on Kirigami and QCC2 that follow the ongoing work on the Maui HIG.
 It let you quickly create a Maui application and access utilities and widgets shared among the other Maui apps.
 
+%files -n %{devname}
+%{_includedir}/MauiKit/Calendar
+%{_libdir}/cmake/MauiKitCalendar
 
 %prep
 %autosetup -p1 -n %{name}-%{?snapshot:master}%{!?snapshot:v%{version}}
-%cmake_kde5 -G Ninja
+%cmake_kde5
 
 %build
 %ninja_build -C build
 
 %install
 %ninja_install -C build
+%find_lang mauikitcalendar
 
-%files
+%files -f mauikitcalendar.lang
