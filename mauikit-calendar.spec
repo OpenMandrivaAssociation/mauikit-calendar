@@ -40,6 +40,7 @@ BuildRequires:	cmake(KF5PlasmaQuick)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(KF5WindowSystem)
 BuildRequires:  akonadi-devel
+BuildRequires:  cmake(KF5AkonadiMime)
 BuildRequires:  cmake(KPim5AkonadiCalendar)
 BuildRequires:  cmake(KPim5AkonadiContact)
 BuildRequires:  cmake(KPim5CalendarSupport)
