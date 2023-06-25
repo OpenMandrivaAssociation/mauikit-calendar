@@ -7,7 +7,7 @@ Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Calendar support components for Maui applications
 Url:		http://mauikit.org/
 Source0:	https://invent.kde.org/maui/mauikit-calendar/-/archive/%{?snapshot:master/mauikit-calendar-master.tar.bz2#/mauikit-calendar-%{snapshot}.tar.bz2}%{!?snapshot:v%{version}/mauikit-calendar-v%{version}.tar.bz2}
-Patch0:		mauikit-calendar-akonadi-23.04.patch
+#Patch0:		mauikit-calendar-akonadi-23.04.patch
 
 License:	LGPL-2.1-or-later, CC0 1.0, BSD-2-Clause
 Group:		Applications/Productivity
