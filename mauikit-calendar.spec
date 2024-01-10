@@ -2,10 +2,10 @@
 %define devname %mklibname -d MauiKitCalendar
 
 Name:		mauikit-calendar
-Version:	1.1.0
+Version:	3.0.2
 Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Calendar support components for Maui applications
-Url:		http://mauikit.org/
+Url:		https://mauikit.org/
 Source0:	https://invent.kde.org/maui/mauikit-calendar/-/archive/%{?snapshot:master/mauikit-calendar-master.tar.bz2#/mauikit-calendar-%{snapshot}.tar.bz2}%{!?snapshot:v%{version}/mauikit-calendar-v%{version}.tar.bz2}
 #Patch0:		mauikit-calendar-akonadi-23.04.patch
 
@@ -14,7 +14,7 @@ Group:		Applications/Productivity
 BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	cmake(ECM)
-BuildRequires:  cmake(MauiKit)
+BuildRequires:  cmake(MauiKit3)
 BuildRequires:	cmake(Qt5Qml)
 BuildRequires:	cmake(Qt5Sql)
 BuildRequires:	cmake(Qt5Core)
@@ -87,7 +87,7 @@ MauiKit is a set of utilities and "templated" controls based on Kirigami and QCC
 It let you quickly create a Maui application and access utilities and widgets shared among the other Maui apps.
 
 %files -n %{libname}
-%{_libdir}/libMauiKitCalendar.so*
+%{_libdir}/libMauiKitCalendar3.so*
 %{_libdir}/qt5/qml/org/mauikit/calendar
 
 %package -n %{devname}
@@ -103,8 +103,8 @@ MauiKit is a set of utilities and "templated" controls based on Kirigami and QCC
 It let you quickly create a Maui application and access utilities and widgets shared among the other Maui apps.
 
 %files -n %{devname}
-%{_includedir}/MauiKit/Calendar
-%{_libdir}/cmake/MauiKitCalendar
+%{_includedir}/MauiKit3/Calendar
+%{_libdir}/cmake/MauiKitCalendar3
 
 %prep
 %autosetup -p1 -n %{name}-%{?snapshot:master}%{!?snapshot:v%{version}}
