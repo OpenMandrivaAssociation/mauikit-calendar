@@ -42,7 +42,7 @@ BuildRequires:	cmake(KF6WindowSystem)
 #BuildRequires:  akonadi-devel
 #BuildRequires:  cmake(KF6AkonadiMime)
 BuildRequires:  cmake(KPim6AkonadiCalendar)
-#BuildRequires:  cmake(KPim6AkonadiContact)
+BuildRequires:  cmake(KPim6AkonadiContactCore)
 BuildRequires:  cmake(KPim6CalendarSupport)
 BuildRequires:  cmake(KPim6CalendarUtils)
 BuildRequires:  cmake(KF6CalendarCore)
