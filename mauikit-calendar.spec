@@ -36,7 +36,7 @@ BuildRequires:	cmake(KF6ConfigWidgets)
 BuildRequires:	cmake(KF6CoreAddons)
 BuildRequires:	cmake(KF6Declarative)
 #BuildRequires:	cmake(KF6Plasma)
-B#uildRequires:	cmake(KF5PlasmaQuick)
+#BuildRequires:	cmake(KF5PlasmaQuick)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(KF6WindowSystem)
 BuildRequires:  akonadi-devel
