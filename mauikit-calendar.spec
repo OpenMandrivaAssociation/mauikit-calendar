@@ -14,7 +14,7 @@ Group:		Applications/Productivity
 BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	cmake(ECM)
-BuildRequires:  cmake(MauiKit3)
+BuildRequires:  cmake(MauiKit4)
 BuildRequires:	cmake(Qt6Qml)
 BuildRequires:	cmake(Qt6Sql)
 BuildRequires:	cmake(Qt6Core)
@@ -59,7 +59,7 @@ BuildRequires:	cmake(Qt6Test)
 BuildRequires:	cmake(Qt6WebEngineCore)
 
 
-BuildRequires:  akonadi-calendar
+BuildRequires: plasma6-akonadi-calendar
 
 Requires:	%{libname} = %{EVRD}
 
@@ -84,8 +84,8 @@ MauiKit is a set of utilities and "templated" controls based on Kirigami and QCC
 It let you quickly create a Maui application and access utilities and widgets shared among the other Maui apps.
 
 %files -n %{libname}
-%{_libdir}/libMauiKitCalendar3.so*
-%{_libdir}/qt5/qml/org/mauikit/calendar
+%{_libdir}/libMauiKitCalendar4.so*
+%{_libdir}/qt6/qml/org/mauikit/calendar
 
 %package -n %{devname}
 Summary:	Development files for mauikit-calendar
@@ -100,8 +100,8 @@ MauiKit is a set of utilities and "templated" controls based on Kirigami and QCC
 It let you quickly create a Maui application and access utilities and widgets shared among the other Maui apps.
 
 %files -n %{devname}
-%{_includedir}/MauiKit3/Calendar
-%{_libdir}/cmake/MauiKitCalendar3
+%{_includedir}/MauiKit4/Calendar
+%{_libdir}/cmake/MauiKitCalendar4
 
 %prep
 %autosetup -p1 -n %{name}-%{?snapshot:master}%{!?snapshot:v%{version}}
