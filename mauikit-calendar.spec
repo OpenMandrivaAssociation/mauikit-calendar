@@ -39,7 +39,7 @@ BuildRequires:	cmake(KF6Declarative)
 #BuildRequires:	cmake(KF5PlasmaQuick)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(KF6WindowSystem)
-BuildRequires:  akonadi-devel
+#BuildRequires:  akonadi-devel
 #BuildRequires:  cmake(KF6AkonadiMime)
 BuildRequires:  cmake(KPim6AkonadiCalendar)
 #BuildRequires:  cmake(KPim6AkonadiContact)
