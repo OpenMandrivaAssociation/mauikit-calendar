@@ -42,6 +42,7 @@ BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(KF6WindowSystem)
 #BuildRequires:  akonadi-devel
 #BuildRequires:  cmake(KF6AkonadiMime)
+BuildRequires:  cmake(KPim6AkonadiMime)
 BuildRequires:  cmake(KPim6AkonadiCalendar)
 BuildRequires:  cmake(KPim6AkonadiContactCore)
 BuildRequires:  cmake(KPim6CalendarSupport)
