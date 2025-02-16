@@ -2,7 +2,7 @@
 %define devname %mklibname -d MauiKitCalendar
 
 Name:		mauikit-calendar
-Version:	4.0.0
+Version:	4.0.1
 Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Calendar support components for Maui applications
 Url:		https://mauikit.org/
